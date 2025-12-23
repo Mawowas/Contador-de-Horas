@@ -14,6 +14,7 @@ def calculo(hora,minuto):
         return f'Hora: {actual.hour + hora}:{minuto + actual.minute}'
     
 # ----------------> main
+# prueba jajajas
 actual = datetime.now()
 
 print(f'Hora actual: {actual.hour}.{actual.minute}\n')
