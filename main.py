@@ -1,7 +1,26 @@
 from datetime import datetime
 
-def calculo(hora,minuto): 
+actual = datetime.now()
+
+# ----------------> main
+def main():
+
+    print(f'Hora actual: {actual.hour}.{actual.minute}\n')
+
+    hora = int(input("Ingresar la hora: "))
+    min = int(input("Ingresar los minutos: "))
+
+    print(calculo(hora, min))
+
+
+def calculo(hora, minuto): 
     min_sobrante = 0
+
+
+    # los minutos sobrantes no los devuelve bien
+    # resolverlo usando % guardandolo y usando el resto
+    # como una suma del minuto actual
+    
     if actual.minute + minuto >= 60:
         hora +=((actual.minute + minuto) // 60)
         min_sobrante = (actual.minute + minuto) % 60
@@ -12,22 +31,9 @@ def calculo(hora,minuto):
         if min_sobrante + minuto // 10 == 0:
             return f'Hora: {actual.hour + hora}:{minuto + min_sobrante}'    
         return f'Hora: {actual.hour + hora}:{minuto + actual.minute}'
-    
-# ----------------> main
-# prueba jajajas
-# prueba 2 cddd
-# jaja nashe
-actual = datetime.now()
 
-print(f'Hora actual: {actual.hour}.{actual.minute}\n')
-
-hora = int(input("Ingresar la hora: "))
-min = int(input("Ingresar los minutos: "))
-
-print(calculo(hora, min))
-
-
-
+if __name__ == "__main__":
+    main()
 
 
 '''
