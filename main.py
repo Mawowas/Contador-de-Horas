@@ -16,6 +16,7 @@ def calculo(hora,minuto):
 # ----------------> main
 # prueba jajajas
 # prueba 2 cddd
+# cambio desde github!!
 actual = datetime.now()
 
 print(f'Hora actual: {actual.hour}.{actual.minute}\n')
