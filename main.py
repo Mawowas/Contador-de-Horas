@@ -45,4 +45,5 @@ if __name__ == "__main__":
 4(final). Adaptarlo a Tkinter
 '''
 
+# rama python a ver que ondis
 
