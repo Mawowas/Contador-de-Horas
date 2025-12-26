@@ -23,6 +23,13 @@ def calculo(hora, minuto):
     # resolverlo usando % guardandolo y usando el resto
     # como una suma del minuto actual
     
+    print(f"Prueba: %: {35 % 10}, // {35 // 10}")
+
+    # si los minutos no superan el 10 pone un 0(cero) a la izquierda
+    if actual.minute + minuto >= 1 and actual.minute + minuto <= 9:
+        return f'Hora: {hora + actual.hour}: 0{actual.minute + minuto}'
+
+    # si los minutos superan los 60 se suma a las horas
     if actual.minute + minuto >= 60:
         hora +=((actual.minute + minuto) // 60)
         min_sobrante = (actual.minute + minuto) % 60
@@ -30,9 +37,12 @@ def calculo(hora, minuto):
             return f'Hora: {hora + actual.hour}:0{min_sobrante}'    
         return f'Hora: {hora + actual.hour}:{min_sobrante}'
     else:
-        if min_sobrante + minuto // 10 == 0:
+        if min_sobrante + minuto // 10 == 0:                                #casi seguro que se puede hacer algo aca abajo
             return f'Hora: {actual.hour + hora}:{minuto + min_sobrante}'    
         return f'Hora: {actual.hour + hora}:{minuto + actual.minute}'
+
+
+
 
 if __name__ == "__main__":
     main()
@@ -47,3 +57,4 @@ if __name__ == "__main__":
 
 # rama python a ver que ondis
 
+# otra linea añadida
